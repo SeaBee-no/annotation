@@ -2626,7 +2626,27 @@ Note
 </section>
 <section id="sec-class-definitions" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="sec-class-definitions"><span class="header-section-number">2.3</span> Class definition files</h3>
-<p>ArcGIS Pro supports</p>
+<p>ArcGIS Pro supports hierarchical class definitions, which can be defined manually via the Training Samples Manager. Class definitions are saved as ESRI Classification Schema files (<code>.ecs</code>), which are JSON files with a specific structure.</p>
+<p>The classes of interest to SeaBee are complex and creating them manually via the user interface is cumbersome. Section 1 of the notebook <a href="https://nbviewer.org/github/SeaBee-no/annotation/blob/main/code/excel_to_class_def_file.ipynb">here</a> includes code to build an <code>.ecs</code> file with the correct schema from an Excel table, which is more convenient in most cases.</p>
+<p>As far as possible, <strong>SeaBee will use a standard set of class definitions for habitat mapping</strong>. The latest versions are available online <a href="https://github.com/SeaBee-no/annotation/tree/main/class_definitions">here</a> in both Excel and <code>.ecs</code> formats.</p>
+<p>The worflow for class definition files is as follows:</p>
+<ol type="1">
+<li><p>Before starting to annotate a new area, <strong>everyone involved must agree on which set of class definitions to use</strong>. If necessary, class definitions can be updated in Excel and a new version of the <code>.ecs</code> file created using the code linked above.</p></li>
+<li><p>Everyone should download the same <code>.ecs</code> file and add it to the <code>class_definitions</code> folder in their ArcGIS project (created in <a href="#sec-setup-project">Section 2.2</a>).</p></li>
+</ol>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using a standard set of classes is important if the machine learning algorithms created by SeaBee are to be transferable/re-trainable. It is likely that some changes to the class schema will be necessary initially, but we are hoping to converge on a standard set of habitat classes if possible. <strong>Proposed changes should be discussed with Hege Gundersen and Kristina Øie Kvile</strong>.</p>
+</div>
+</div>
 </section>
 <section id="sec-mosaics" class="level3" data-number="2.4">
 <h3 data-number="2.4" class="anchored" data-anchor-id="sec-mosaics"><span class="header-section-number">2.4</span> Orthomosaics</h3>
