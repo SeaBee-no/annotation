@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><a href="https://github.com/SeaBee-no/annotation">SeaBee Annotation repository on GitHub</a></p>
+<p><a href="https://github.com/SeaBee-no/annotation">Repository on GitHub</a></p>
 <section id="sec-overview" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="sec-overview"><span class="header-section-number">1</span> Overview</h2>
 <p>This document describes the SeaBee annotation workflow developed and tested using the <strong>Runde/Remøy</strong> dataset during December 2022.</p>
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="2.1" class="anchored" data-anchor-id="sec-install-arcgis"><span class="header-section-number">2.1</span> Install ArcGIS Pro</h3>
 <p>Follow the steps below to download and install ArcGIS Pro on your local machine.</p>
 <ol type="1">
-<li><p>Contact Jan Karud to obtain login details for ArcGIS Online. You need access to <strong>ArcGIS Pro</strong> with the <strong>Image Analyst</strong> extension. Login <a href="https://www.arcgis.com/index.html">here</a>.</p></li>
+<li><p>Contact Jan Karud to obtain login details for ArcGIS Online. You need access to <strong>ArcGIS Pro</strong> with the <strong>Image Analyst</strong> extension.</p></li>
 <li><p><a href="https://www.arcgis.com/index.html">Login to ArcGIS Online</a> and, under your profile, choose <code>Settings &gt; Licenses</code>. Check that Image Analyst is available to you under <code>ArcGIS Pro extensions</code>, then click the link to <code>Download ArcGIS Pro</code> (<a href="#fig-download-arcgis-pro">Figure&nbsp;1</a>).</p></li>
 <li><p>Obtain an administrator password from IT-Vakt and run the installer. You should then be able to start ArcGIS Pro and login to the application using your ArcGIS Online credentials.</p></li>
 </ol>
@@ -117,7 +117,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>ArcGIS may run slowly if you choose a network folder or a folder that is synchronised to an external server (e.g.&nbsp;DropBox, OneDrive, GoogleDrive).</p>
+<p>ArcGIS may run slowly if you set <code>Location</code> to be a network folder or a folder that is synchronised to an external server (e.g.&nbsp;DropBox, OneDrive, GoogleDrive).</p>
 </div>
 </div>
 <ol start="2" type="1">
@@ -143,7 +143,7 @@ Note
 <p>ArcGIS Pro supports hierarchical class definitions, which can be defined manually via the Training Samples Manager. Class definitions are saved as ESRI Classification Schema files (<code>.ecs</code>), which are JSON files with a specific structure.</p>
 <p>The classes of interest to SeaBee are complex and creating them manually via the user interface is cumbersome. Section 1 of the notebook <a href="https://nbviewer.org/github/SeaBee-no/annotation/blob/main/code/excel_to_class_def_file.ipynb">here</a> includes code to build an <code>.ecs</code> file with the correct schema from an Excel table, which is more convenient in most cases.</p>
 <p>As far as possible, <strong>SeaBee will use a standard set of class definitions for habitat mapping</strong>. The latest versions are available online <a href="https://github.com/SeaBee-no/annotation/tree/main/class_definitions">here</a> in both Excel and <code>.ecs</code> formats.</p>
-<p>The worflow for class definition files is as follows:</p>
+<p>The workflow for class definition files is as follows:</p>
 <ol type="1">
 <li><p>Before starting to annotate a new area, <strong>everyone involved must agree on which set of class definitions (i.e.&nbsp;which version) to use</strong>. If necessary, class definitions can be updated in Excel and a new version of the <code>.ecs</code> file created using the code linked above.</p></li>
 <li><p>Everyone should download the same <code>.ecs</code> file and add it to the <code>class_definitions</code> folder in their ArcGIS project (created in <a href="#sec-setup-project">Section&nbsp;2.2</a>).</p></li>
@@ -197,8 +197,8 @@ Note
 </section>
 <section id="sec-ground-truth" class="level3" data-number="2.5">
 <h3 data-number="2.5" class="anchored" data-anchor-id="sec-ground-truth"><span class="header-section-number">2.5</span> Ground truth data</h3>
-<p>Point shapefiles of ground truth data are also available for most missions. These are typically stored in the mission folder on Sharepoint/Teams somewhere within a subfolder named <code>GT</code>.</p>
-<p>If available, download the shapefile and add it to the <code>vector</code> in ArcGIS.</p>
+<p>Point shapefiles of ground truth data are available for most missions. These are typically stored in the mission folder on Sharepoint/Teams somewhere within a subfolder named <code>GT</code>.</p>
+<p>If available, download the shapefile and add it to the <code>vector</code> folder within your in ArcGIS project.</p>
 </section>
 <section id="sec-roi" class="level3" data-number="2.6">
 <h3 data-number="2.6" class="anchored" data-anchor-id="sec-roi"><span class="header-section-number">2.6</span> Region of interest and training subareas</h3>
@@ -221,7 +221,7 @@ Important
 </div>
 </div>
 <ul>
-<li><p>The training sub areas are a set of rectangles (say, 5 to 10) that define discrete areas within which you annotate. See red rectangles on <a href="#fig-training-subareas">Figure&nbsp;2</a> for an example from Remøy. Defining subareas is helpful because, for example, we might want to train an algorithm using annotations from Areas 1 to 3, then iteratively evaluate it against data from Areas 4 and 5. Once we’re satisfied, we can use data from Area 6 to get a independent assessment of the model’s performance.</p>
+<li><p>The training subareas are a set of rectangles (say, 5 to 10) that define discrete areas within which you create annotation. See red rectangles on <a href="#fig-training-subareas">Figure&nbsp;2</a> for an example from Remøy. Defining subareas is helpful because we might want to train an algorithm using annotations from e.g.&nbsp;Areas 1 to 3, then iteratively evaluate it against data from Areas 4 and 5. Once we’re satisfied, we can use data from Area 6 to get a independent assessment of the model’s performance.</p>
 <p>Defining training subareas is also a convenient way of dividing the annotation workload between several people: each person agrees to annotate one or two specific subareas. This avoids accidental of duplication of effort (although at times it may also be useful for several people to annotate the same area to assess consistency).</p></li>
 </ul>
 <div id="fig-training-subareas" class="quarto-figure quarto-figure-center anchored">
@@ -233,11 +233,11 @@ Important
 </section>
 <section id="sec-styling" class="level3" data-number="2.7">
 <h3 data-number="2.7" class="anchored" data-anchor-id="sec-styling"><span class="header-section-number">2.7</span> Styling the map</h3>
-<p>Once you have download all the relevant datasets and added them to your project folder in ArcGIS, you can add the layers to your map and style them appropriately. <a href="#fig-project-window">Figure&nbsp;3</a> shows an example.</p>
+<p>Once you have download all the relevant datasets and added them to your project folder in ArcGIS, you can add layers to your map and style them appropriately. <a href="#fig-project-window">Figure&nbsp;3</a> shows an example.</p>
 <ol type="1">
 <li><p>Drag each layer from the <code>Catalog</code> pane (right-most column in <a href="#fig-project-window">Figure&nbsp;3</a>) to the ArcGIS <code>Table of contents</code> (left-most pane in <a href="#fig-project-window">Figure&nbsp;3</a>). The order of layers in the <code>Table of contents</code> defines the drawing order on the map, so put the orthomosaic at the bottom and the other layers on top.</p></li>
 <li><p>Right-click each vector layer in the <code>Table of contents</code> and choose <code>Symbology</code>. This will allow you to define fill and outline colours for the vector layers on your map.</p></li>
-<li><p>[Optional] Right-click the ground truth dataset and choose <code>Labelling Properties</code>. Set the <code>Expression</code> to <code>$feature.Kode</code>, where <code>Kode</code> is the column in the ground truth attribute table containing the labels you want to use. When you click <code>Apply</code>, you should see each point in the ground truth dataset labelled with its class code.</p></li>
+<li><p>[Optional] Right-click the ground truth dataset and choose <code>Labelling Properties</code>. Set the <code>Expression</code> to be <code>$feature.Kode</code>, where <code>Kode</code> is the column in the ground truth attribute table containing the labels you want to use. When you click <code>Apply</code>, you should see each point in the ground truth dataset labelled with its class code.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -277,7 +277,7 @@ Tip
 </div>
 <ol start="5" type="1">
 <li><p>It is a good idea to <strong>periodically group polygons of the same class</strong>. This is done by selecting the rows you wish to group in the lower pane (using <code>SHIFT + Click</code> or <code>CTRL + Click</code>) and then clicking the <code>Collapse</code> icon (two arrows coming together). You can also ungroup using the <code>Expand</code> button (one arrow splitting into two).</p></li>
-<li><p>When you have finished your digitising session, click the <code>Save</code> icon in the lower pane of the Training Samples Manager to save your training samples as a shapefile (to the <code>vector</code> folder within your ArcGIS project). You should also save the entire ArcGIS project before closing down.</p></li>
+<li><p>When you have finished your digitising session, click the <code>Save</code> icon in the lower pane of the Training Samples Manager to save your training samples as a shapefile in the <code>vector</code> folder within your ArcGIS project. You should also save the entire ArcGIS project before closing down.</p></li>
 <li><p>If you wish to <strong>continue annotating using a shapefile created previously</strong>, first open your ArcGIS project and load the class definitions file (steps 1 to 3 above). Then, instead of creating annotation from scratch, click the folder icon in the lower part of the Image Classification pane (labelled <code>Load training samples</code>) and browse to the annotation shapefile created previously. You can now continue annotating and save changes back to the original shapefile.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -298,8 +298,8 @@ Tip
 <li><p>You don’t need to digitise <em>everything</em> within each training subarea (but the more the better).</p></li>
 <li><p><strong>Do not</strong> annotate anything outside of the training subareas and <strong>do not</strong> draw polygons that cross subarea boundaries.</p></li>
 <li><p><strong>Do not</strong> draw overlapping polygons or polygons that touch one another (ideally, there should be at least one pixel between adjacent polygons).</p></li>
-<li><p><strong>Do not</strong> draw self-intersecting polygons (i.e.&nbsp;when the line you’re drawing crosses itself, such as when drawing a figure-of-eight or bow-tie shape). Such polygons are <a href="https://postgis.net/workshops/postgis-intro/validity.html">invalid</a> and they cause problems later in the workflow. In particular, there is a bug/lack of error handling in ArcGIS Pro’s Training Samples Manager that causes the application to crash hard if you attempt to merge/group invalid polygons.</p></li>
-<li><p>If you’re not sure how to assign something, or where a boundary should be drawn, the key question to ask yourself is this: “<em>Would I be happy if an algorithm classified this entire polygon as <code>X</code></em>?” If the answer is “<em>Yes</em>”, it is reasonable to tag the whole polygon as <code>X</code>; if the answer is “<em>No</em>” consider subdividing or deleting it.</p></li>
+<li><p><strong>Do not</strong> draw self-intersecting polygons (i.e.&nbsp;when the line you’re drawing crosses itself, such as when drawing a figure-of-eight or bow-tie shape). Such polygons are <a href="https://postgis.net/workshops/postgis-intro/validity.html">invalid</a> and they cause problems later in the workflow. In particular, there is a bug/lack of error handling in ArcGIS Pro’s Training Samples Manager that causes the application to crash hard if you attempt to group invalid polygons.</p></li>
+<li><p>If you’re not sure how to assign something, or where a boundary should be drawn, the key question to ask yourself is: “<em>Would I be happy if an algorithm classified this entire polygon as <code>X</code></em>?” If the answer is “<em>Yes</em>”, it is reasonable to tag the whole polygon as <code>X</code>; if the answer is “<em>No</em>” consider subdividing or deleting it.</p></li>
 </ul>
 </div>
 </div>
