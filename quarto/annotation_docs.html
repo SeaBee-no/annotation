@@ -56,6 +56,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-roi" id="toc-sec-roi" class="nav-link" data-scroll-target="#sec-roi"><span class="toc-section-number">2.6</span>  Region of interest and training subareas</a></li>
   <li><a href="#sec-styling" id="toc-sec-styling" class="nav-link" data-scroll-target="#sec-styling"><span class="toc-section-number">2.7</span>  Styling the map</a></li>
   <li><a href="#sec-annotation" id="toc-sec-annotation" class="nav-link" data-scroll-target="#sec-annotation"><span class="toc-section-number">2.8</span>  Creating annotation</a></li>
+  <li><a href="#sec-packaging" id="toc-sec-packaging" class="nav-link" data-scroll-target="#sec-packaging"><span class="toc-section-number">2.9</span>  Package annotation</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -122,7 +123,7 @@ Tip
 </div>
 <ol start="2" type="1">
 <li><p>Within your project folder, create three new subfolders: <code>class_definitions</code>, <code>vector</code> and <code>raster</code>. This can either be done using the <code>Catalog</code> pane in ArcGIS or using Windows’ File Explorer.</p></li>
-<li><p>Download mission datasets and add them to the relevant subfolders. As a minimum, you will need a <strong>class definition file</strong> and a <strong>georeferenced orthomosaic</strong>. Optionally, you may include a <strong>ground truth dataset</strong>, a <strong>region of interest (ROI) file</strong> and any <strong>pre-existing annotation</strong> for your area of interest. See <a href="#sec-class-definitions">Section&nbsp;2.3</a> to <a href="#sec-roi">Section&nbsp;2.6</a> for details.</p></li>
+<li><p>Download relevant mission datasets and add them to the appropriate subfolders. As a minimum, you will need a <strong>class definition file</strong> and a <strong>georeferenced orthomosaic</strong>. Optionally, you may include a <strong>ground truth dataset</strong>, a <strong>region of interest (ROI) file</strong> and any <strong>pre-existing annotation</strong> for your area of interest. See <a href="#sec-class-definitions">Section&nbsp;2.3</a> to <a href="#sec-roi">Section&nbsp;2.6</a> for details.</p></li>
 </ol>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -141,7 +142,7 @@ Note
 <section id="sec-class-definitions" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="sec-class-definitions"><span class="header-section-number">2.3</span> Class definition files</h3>
 <p>ArcGIS Pro supports hierarchical class definitions, which can be defined manually via the Training Samples Manager. Class definitions are saved as ESRI Classification Schema files (<code>.ecs</code>), which are JSON files with a specific structure.</p>
-<p>The classes of interest to SeaBee are complex and creating them manually via the user interface is cumbersome. Section 1 of the notebook <a href="https://nbviewer.org/github/SeaBee-no/annotation/blob/main/code/excel_to_class_def_file.ipynb">here</a> includes code to build an <code>.ecs</code> file with the correct schema from an Excel table, which is more convenient in most cases.</p>
+<p>The classes of interest to SeaBee are complex and creating them manually via the user interface is cumbersome. Section 2 of the notebook <a href="https://nbviewer.org/github/SeaBee-no/annotation/blob/main/code/annotation_workflow.ipynb">here</a> includes code to build an <code>.ecs</code> file with the correct schema from an Excel table, which is more convenient in most cases.</p>
 <p>As far as possible, <strong>SeaBee will use a standard set of class definitions for habitat mapping</strong>. The latest versions are available online <a href="https://github.com/SeaBee-no/annotation/tree/main/class_definitions">here</a> in both Excel and <code>.ecs</code> formats.</p>
 <p>The workflow for class definition files is as follows:</p>
 <ol type="1">
@@ -197,12 +198,12 @@ Note
 </section>
 <section id="sec-ground-truth" class="level3" data-number="2.5">
 <h3 data-number="2.5" class="anchored" data-anchor-id="sec-ground-truth"><span class="header-section-number">2.5</span> Ground truth data</h3>
-<p>Point shapefiles of ground truth data are available for most missions. These are typically stored in the mission folder on Sharepoint/Teams somewhere within a subfolder named <code>GT</code>.</p>
+<p>Point shapefiles of ground truth data are available for most missions. These are typically stored in the mission folder on Sharepoint/Teams within a subfolder named <code>GT</code>.</p>
 <p>If available, download the shapefile and add it to the <code>vector</code> folder within your in ArcGIS project.</p>
 </section>
 <section id="sec-roi" class="level3" data-number="2.6">
 <h3 data-number="2.6" class="anchored" data-anchor-id="sec-roi"><span class="header-section-number">2.6</span> Region of interest and training subareas</h3>
-<p>For each mission, you should create shapefile defining your region of interest (ROI) and a set of subareas that will be used to divide the annotation data into “blocks”.</p>
+<p>For each mission, you should create shapefiles defining (i) your region of interest (ROI), and (ii) a set of subareas that will be used to divide the annotation data into “blocks”. When you create these shapefiles, be sure to <strong>use the same co-ordinate reference system (CRS) as the orthomosaic you wish to annotate</strong>.</p>
 <ul>
 <li><p>The ROI defines the area that you would eventually like to classify. This will typically cover a large proportion of the total image, but <strong>excluding anything not covered by your class definition file</strong> (see <a href="#sec-class-definitions">Section&nbsp;2.3</a>). As an example, see the black dashed line defining the ROI for Remøy on <a href="#fig-training-subareas">Figure&nbsp;2</a>.</p>
 <p>Machine learning algorithms only learn based on the training samples you provide, so if the prediction area includes things not present in the training data you will get poor results. If possible, use the ROI file to define an area excluding things like roads, buildings and bridges that you are not interested in. You can then ignore these at the annotation stage and focus instead on annotating classes of ecological interest.</p></li>
@@ -221,8 +222,8 @@ Important
 </div>
 </div>
 <ul>
-<li><p>The training subareas are a set of rectangles (say, 5 to 10) that define discrete areas within which you create annotation. See red rectangles on <a href="#fig-training-subareas">Figure&nbsp;2</a> for an example from Remøy. Defining subareas is helpful because we might want to train an algorithm using annotations from e.g.&nbsp;Areas 1 to 3, then iteratively evaluate it against data from Areas 4 and 5. Once we’re satisfied, we can use data from Area 6 to get a independent assessment of the model’s performance.</p>
-<p>Defining training subareas is also a convenient way of dividing the annotation workload between several people: each person agrees to annotate one or two specific subareas. This avoids accidental of duplication of effort (although at times it may also be useful for several people to annotate the same area to assess consistency).</p></li>
+<li><p>The training subareas are a set of rectangles (say, 5 to 10) that define discrete areas within which you create annotation. See the red rectangles on <a href="#fig-training-subareas">Figure&nbsp;2</a> for an example from Remøy. Defining subareas is helpful because we might want to train an algorithm using annotations from e.g.&nbsp;Areas 1 to 3, then iteratively evaluate it against data from Areas 4 and 5. Once we’re satisfied, we can use data from Area 6 to get a independent assessment of the model’s performance.</p>
+<p>Defining training subareas is also a convenient way of dividing the annotation workload between several people: each person agrees to annotate one or two specific subareas. This avoids accidental duplication of effort (although at times it may also be useful for several people to annotate the same area to assess consistency).</p></li>
 </ul>
 <div id="fig-training-subareas" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -237,7 +238,7 @@ Important
 <ol type="1">
 <li><p>Drag each layer from the <code>Catalog</code> pane (right-most column in <a href="#fig-project-window">Figure&nbsp;3</a>) to the ArcGIS <code>Table of contents</code> (left-most pane in <a href="#fig-project-window">Figure&nbsp;3</a>). The order of layers in the <code>Table of contents</code> defines the drawing order on the map, so put the orthomosaic at the bottom and the other layers on top.</p></li>
 <li><p>Right-click each vector layer in the <code>Table of contents</code> and choose <code>Symbology</code>. This will allow you to define fill and outline colours for the vector layers on your map.</p></li>
-<li><p>[Optional] Right-click the ground truth dataset and choose <code>Labelling Properties</code>. Set the <code>Expression</code> to be <code>$feature.Kode</code>, where <code>Kode</code> is the column in the ground truth attribute table containing the labels you want to use. When you click <code>Apply</code>, you should see each point in the ground truth dataset labelled with its class code.</p></li>
+<li><p>[Optional] Right-click the ground truth dataset and choose <code>Labelling Properties</code>. Set the <code>Expression</code> to be <code>$feature.Kode</code>, where <code>Kode</code> is the name of the column in the ground truth attribute table containing the labels you want to use. When you click <code>Apply</code>, you should see each point in the ground truth dataset labelled with its class code.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -265,7 +266,7 @@ Tip
 <ol type="1">
 <li><p>In the ArcGIS <code>Table of contents</code> (left-most pane in <a href="#fig-project-window">Figure&nbsp;3</a>), select one of your orthomosaic layers. This will activate the Image Analyst extension.</p></li>
 <li><p>On the “ribbon” (i.e.&nbsp;menu bar), select the <code>Imagery</code> tab and choose <code>Classification Tools &gt; Training Samples Manager</code>. A new pane should appear at the right side of the window.</p></li>
-<li><p>In the upper part of the new pane, click the folder icon (which has a tooltip of <code>Classification schema</code>) and load your class definition file (see <a href="#sec-class-definitions">Section&nbsp;2.3</a>). You should see the class hierarchy added to the upper half of the window.</p></li>
+<li><p>In the upper part of the new pane, click the folder icon (which has a tooltip saying <code>Classification schema</code>) and load your class definition file (see <a href="#sec-class-definitions">Section&nbsp;2.3</a>). You should see the class hierarchy added to the upper half of the window.</p></li>
 <li><p>Identify the training area you wish to annotate and zoom in on a feature (e.g.&nbsp;a boulder or patch of algae). In the class hierarchy, select the class you wish to annotate, choose one of drawing tools from the top of the window and begin digitising. In most cases, the <code>Freehand</code> tool is likely to be most useful.</p></li>
 </ol>
 <p>Each polygon you draw will appear in the lower half of the <code>Image Classification</code> pane (see <a href="#fig-training-samples-manager">Figure&nbsp;4</a>). The <code>Pixels (%)</code> column shows what proportion of the pixels digitised so far belong to each class.</p>
@@ -277,8 +278,8 @@ Tip
 </div>
 <ol start="5" type="1">
 <li><p>It is a good idea to <strong>periodically group polygons of the same class</strong>. This is done by selecting the rows you wish to group in the lower pane (using <code>SHIFT + Click</code> or <code>CTRL + Click</code>) and then clicking the <code>Collapse</code> icon (two arrows coming together). You can also ungroup using the <code>Expand</code> button (one arrow splitting into two).</p></li>
-<li><p>When you have finished your digitising session, click the <code>Save</code> icon in the lower pane of the Training Samples Manager to save your training samples as a shapefile in the <code>vector</code> folder within your ArcGIS project. You should also save the entire ArcGIS project before closing down.</p></li>
-<li><p>If you wish to <strong>continue annotating using a shapefile created previously</strong>, first open your ArcGIS project and load the class definitions file (steps 1 to 3 above). Then, instead of creating annotation from scratch, click the folder icon in the lower part of the Image Classification pane (labelled <code>Load training samples</code>) and browse to the annotation shapefile created previously. You can now continue annotating and save changes back to the original shapefile.</p></li>
+<li><p>When you have finished your digitising session, click the <code>Save</code> icon in the lower pane of the Training Samples Manager to save your training samples as a shapefile in the <code>vector</code> folder of your ArcGIS project. You should also save the entire ArcGIS project before closing down.</p></li>
+<li><p>If you wish to <strong>continue annotating using a shapefile created previously</strong>, first open your ArcGIS project and load the class definitions file (steps 1 to 3 above). Then, instead of creating new annotation from scratch, click the folder icon in the lower part of the <code>Image Classification</code> pane (labelled <code>Load training samples</code>) and browse to the annotation shapefile created previously. You can now continue annotating and save changes back to the original shapefile.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -290,7 +291,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The following tips should help to create good quality annotation:</p>
+<p>The following tips should help you to create good quality annotation:</p>
 <ul>
 <li><p>Always assign the most detailed level in the class hierarchy that you can <strong>confidently</strong> identify. If you are not sure, assign the level above.</p></li>
 <li><p>Group your polygons by class regularly and get into the habit of clicking <code>Save</code> immediately <em>before</em> each grouping operation.</p></li>
@@ -303,6 +304,20 @@ Tip
 </ul>
 </div>
 </div>
+</section>
+<section id="sec-packaging" class="level3" data-number="2.9">
+<h3 data-number="2.9" class="anchored" data-anchor-id="sec-packaging"><span class="header-section-number">2.9</span> Package annotation</h3>
+<p>Once all subareas have been digitised, each person should upload their annotation shapefiles to an agreed folder on Teams (eventually, on Sigma2). <strong>Make sure each subarea is included only once</strong>.</p>
+<ol type="1">
+<li><p>Work through the notebook <a href="https://nbviewer.org/github/SeaBee-no/annotation/blob/main/code/annotation_workflow.ipynb">here</a>, specifically Sections 3 to 6. This will:</p>
+<ol type="i">
+<li><p>Merge the annotation shapefiles for each subarea or group of subareas into a single dataset.</p></li>
+<li><p>Tag each of the annotation polygons with the subarea ID, making it easier to filter/subdivide the training data.</p></li>
+<li><p>Reconstruct the original, three-column class hierarchy from the single-column ArcGIS output. This makes it easy to generate raster annotation for any of the three “levels”.</p></li>
+<li><p>Create a geopackage combining the annotation data, the subarea polygons and the region of interest.</p></li>
+</ol></li>
+<li><p>The geopackage should be uploaded to Teams/Sharepoint and shared with NR, together with links to the relevant orthomosaics.</p></li>
+</ol>
 </section>
 </section>
 

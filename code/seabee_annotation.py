@@ -229,7 +229,7 @@ def split_every_n(class_str, n=2):
     """Split a string every n characters and return the part from the start
     to the split.
     """
-    return [class_str[0: i + n] for i in range(0, len(class_str), n)]
+    return [class_str[0 : i + n] for i in range(0, len(class_str), n)]
 
 
 def rebuild_class_hierarchy(gdf, class_def_path):
@@ -277,9 +277,12 @@ def rebuild_class_hierarchy(gdf, class_def_path):
         )
         gdf = gdf.merge(lev_df, how="left", on=f"lev{level}_code")
 
+    # Dissolve
+    gdf = gdf.dissolve(by=["subarea_id", "lev3_code"]).reset_index()
+
     # Tidy
     cols = [
-        # "Classcode",
+        "subarea_id",
         "lev1_code",
         "lev2_code",
         "lev3_code",
@@ -290,7 +293,6 @@ def rebuild_class_hierarchy(gdf, class_def_path):
         "RED",
         "GREEN",
         "BLUE",
-        "Count",
         "geometry",
     ]
     gdf = gdf[cols]
