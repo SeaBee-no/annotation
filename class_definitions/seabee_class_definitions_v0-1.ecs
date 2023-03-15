@@ -22,7 +22,7 @@
                             "classVal": 101010,
                             "alias": "101010",
                             "name": "ALAES",
-                            "color": "#751557",
+                            "color": "#E2EC90",
                             "description": "Alaria esculenta (butare)",
                             "subclasses": []
                         },
@@ -30,7 +30,7 @@
                             "classVal": 101011,
                             "alias": "101011",
                             "name": "CHOFI",
-                            "color": "#66D6DE",
+                            "color": "#03E4B6",
                             "description": "Chorda filum (martaum)",
                             "subclasses": []
                         },
@@ -38,7 +38,7 @@
                             "classVal": 101012,
                             "alias": "101012",
                             "name": "DESVI",
-                            "color": "#D169F2",
+                            "color": "#D5F097",
                             "description": "Desmarestia viridis (mykt kjerringhår)",
                             "subclasses": []
                         },
@@ -46,7 +46,7 @@
                             "classVal": 101013,
                             "alias": "101013",
                             "name": "LAMHY",
-                            "color": "#A2B046",
+                            "color": "#E2CF7E",
                             "description": "Laminaria hyperborea (stortare)",
                             "subclasses": []
                         },
@@ -54,7 +54,7 @@
                             "classVal": 101014,
                             "alias": "101014",
                             "name": "LAMDI",
-                            "color": "#8BC5DD",
+                            "color": "#8E0225",
                             "description": "Laminaria digitata (fingertare)",
                             "subclasses": []
                         },
@@ -62,7 +62,7 @@
                             "classVal": 101015,
                             "alias": "101015",
                             "name": "PELCA",
-                            "color": "#A56ACB",
+                            "color": "#B86934",
                             "description": "Pelevetia canaliculata (sauetang)",
                             "subclasses": []
                         },
@@ -70,7 +70,7 @@
                             "classVal": 101016,
                             "alias": "101016",
                             "name": "SACLA",
-                            "color": "#C29E02",
+                            "color": "#01B22B",
                             "description": "Saccharina latissima (sukkertare)",
                             "subclasses": []
                         },
@@ -78,7 +78,7 @@
                             "classVal": 101017,
                             "alias": "101017",
                             "name": "FUCSE",
-                            "color": "#96FFD7",
+                            "color": "#4A2D71",
                             "description": "Fucus serratus (sagtang)",
                             "subclasses": []
                         },
@@ -86,7 +86,7 @@
                             "classVal": 101018,
                             "alias": "101018",
                             "name": "ASCNO",
-                            "color": "#4D015D",
+                            "color": "#480CBE",
                             "description": "Ascophyllum nodosum (grisetang)",
                             "subclasses": []
                         },
@@ -94,7 +94,7 @@
                             "classVal": 101019,
                             "alias": "101019",
                             "name": "FUCSP",
-                            "color": "#9E3DBC",
+                            "color": "#FF4989",
                             "description": "Fucus spiralis (spiraltang)",
                             "subclasses": []
                         },
@@ -102,7 +102,7 @@
                             "classVal": 101020,
                             "alias": "101020",
                             "name": "FUCVE",
-                            "color": "#91795F",
+                            "color": "#7E368B",
                             "description": "Fucus vesiculosus (blæretang) ",
                             "subclasses": []
                         },
@@ -110,7 +110,7 @@
                             "classVal": 101021,
                             "alias": "101021",
                             "name": "HALSI",
-                            "color": "#589510",
+                            "color": "#C1C5A8",
                             "description": "Halidrys siliquosa (skulpetang/skolmetang)",
                             "subclasses": []
                         },
@@ -118,7 +118,7 @@
                             "classVal": 101022,
                             "alias": "101022",
                             "name": "MACROMIX",
-                            "color": "#78C3CB",
+                            "color": "#E33905",
                             "description": "Div markroalger",
                             "subclasses": []
                         }
@@ -135,7 +135,7 @@
                             "classVal": 101110,
                             "alias": "101110",
                             "name": "CLARU",
-                            "color": "#E46564",
+                            "color": "#E91CFB",
                             "description": "Cladophora rupestris (grønndusk)",
                             "subclasses": []
                         },
@@ -143,7 +143,7 @@
                             "classVal": 101111,
                             "alias": "101111",
                             "name": "GREENROCK",
-                            "color": "#7873F3",
+                            "color": "#9BDAB0",
                             "description": "Green algae on rock (grønnalge på stein)",
                             "subclasses": []
                         },
@@ -151,7 +151,7 @@
                             "classVal": 101112,
                             "alias": "101112",
                             "name": "PRASP",
-                            "color": "#110BDF",
+                            "color": "#28045C",
                             "description": "Prasiola sp. (e.g. mosegrønske)",
                             "subclasses": []
                         },
@@ -159,7 +159,7 @@
                             "classVal": 101113,
                             "alias": "101113",
                             "name": "ULVIN",
-                            "color": "#6111ED",
+                            "color": "#D4D9B2",
                             "description": "Ulva intestinalis (tarmgrønske)",
                             "subclasses": []
                         }
@@ -176,7 +176,7 @@
                             "classVal": 101210,
                             "alias": "101210",
                             "name": "PORUM",
-                            "color": "#B6AF99",
+                            "color": "#BDEA5C",
                             "description": "Porphyra umbilicalis (fjærehinne)",
                             "subclasses": []
                         },
@@ -184,7 +184,7 @@
                             "classVal": 101211,
                             "alias": "101211",
                             "name": "CHOCR",
-                            "color": "#D67E9B",
+                            "color": "#E66D9B",
                             "description": "Chondrus crispus (krusflik)",
                             "subclasses": []
                         },
@@ -192,7 +192,7 @@
                             "classVal": 101212,
                             "alias": "101212",
                             "name": "FURLU",
-                            "color": "#C36180",
+                            "color": "#0B73A1",
                             "description": "Furcellaria lumbricalis (svartkluft)",
                             "subclasses": []
                         },
@@ -200,7 +200,7 @@
                             "classVal": 101213,
                             "alias": "101213",
                             "name": "HILRU",
-                            "color": "#C6EB92",
+                            "color": "#07EB28",
                             "description": "Hildenbrandia rubra (fjæreblod)",
                             "subclasses": []
                         },
@@ -208,7 +208,7 @@
                             "classVal": 101214,
                             "alias": "101214",
                             "name": "PALPA",
-                            "color": "#BCFFF7",
+                            "color": "#EC332E",
                             "description": "Palmaria palmata (søl)",
                             "subclasses": []
                         },
@@ -216,7 +216,7 @@
                             "classVal": 101215,
                             "alias": "101215",
                             "name": "VERLA",
-                            "color": "#D1DF4A",
+                            "color": "#CE3EF9",
                             "description": "Vertebrata lanosa (grisetangdokke/trøffeltang)",
                             "subclasses": []
                         }
@@ -285,7 +285,7 @@
                             "classVal": 121010,
                             "alias": "121010",
                             "name": "ECHES",
-                            "color": "#79861D",
+                            "color": "#0AD541",
                             "description": "Echinus esculentus (rød kråkebolle)",
                             "subclasses": []
                         }
@@ -354,7 +354,7 @@
                             "classVal": 141010,
                             "alias": "141010",
                             "name": "ZOSMA",
-                            "color": "#367A0C",
+                            "color": "#58AF2C",
                             "description": "Zostera marina (ålegras)",
                             "subclasses": []
                         }
@@ -440,7 +440,7 @@
                             "classVal": 171011,
                             "alias": "171011",
                             "name": "BOULDER_RUR",
-                            "color": "#F5BC03",
+                            "color": "#BE293D",
                             "description": "Blokk/fjell med rur",
                             "subclasses": []
                         },
@@ -448,7 +448,7 @@
                             "classVal": 171012,
                             "alias": "171012",
                             "name": "BOULDER_LAV",
-                            "color": "#BEED17",
+                            "color": "#6609B4",
                             "description": "Blokk/fjell med messinglav/kartlav",
                             "subclasses": []
                         }
