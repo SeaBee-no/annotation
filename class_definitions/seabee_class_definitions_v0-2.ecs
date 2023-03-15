@@ -1,0 +1,563 @@
+{
+    "version": 1,
+    "name": "seabee_class_definitions_v0-2",
+    "organization": "NIVA",
+    "description": "v0-2 of the SeaBee class definition file.",
+    "classDefs": [
+        {
+            "classVal": 10,
+            "alias": "10",
+            "name": "ALGAE",
+            "color": "#0091ff",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1010,
+                    "alias": "1010",
+                    "name": "BROWN",
+                    "color": "#6e5400",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 101010,
+                            "alias": "101010",
+                            "name": "ALAES",
+                            "color": "#C39E47",
+                            "description": "Alaria esculenta (butare)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101011,
+                            "alias": "101011",
+                            "name": "CHOFI",
+                            "color": "#4B515D",
+                            "description": "Chorda filum (martaum)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101012,
+                            "alias": "101012",
+                            "name": "LAMHY",
+                            "color": "#B0D545",
+                            "description": "Laminaria hyperborea (stortare) + L. digitata (fingertare)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101013,
+                            "alias": "101013",
+                            "name": "PELCA",
+                            "color": "#33B24E",
+                            "description": "Pelvetia canaliculata (sauetang)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101014,
+                            "alias": "101014",
+                            "name": "SACLA",
+                            "color": "#C9ADCA",
+                            "description": "Saccharina latissima (sukkertare)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101015,
+                            "alias": "101015",
+                            "name": "FUCSE",
+                            "color": "#1011F7",
+                            "description": "Fucus serratus (sagtang)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101016,
+                            "alias": "101016",
+                            "name": "ASCNO",
+                            "color": "#C0DCBB",
+                            "description": "Ascophyllum nodosum (grisetang)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101017,
+                            "alias": "101017",
+                            "name": "FUCSP",
+                            "color": "#4E4390",
+                            "description": "Fucus spiralis (spiraltang)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101018,
+                            "alias": "101018",
+                            "name": "FUCVE",
+                            "color": "#68DB0C",
+                            "description": "Fucus vesiculosus (blæretang) ",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101019,
+                            "alias": "101019",
+                            "name": "HALSI",
+                            "color": "#DBA72D",
+                            "description": "Halidrys siliquosa (skulpetang/skolmetang)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101020,
+                            "alias": "101020",
+                            "name": "MACROMIX",
+                            "color": "#FA056B",
+                            "description": "Blanding av ulike tang- og tarearter",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101021,
+                            "alias": "101021",
+                            "name": "FUCUS_SPP",
+                            "color": "#91136A",
+                            "description": "Tang uspesifisert",
+                            "subclasses": []
+                        }
+                    ]
+                },
+                {
+                    "classVal": 1011,
+                    "alias": "1011",
+                    "name": "GREEN",
+                    "color": "#19b01b",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 101110,
+                            "alias": "101110",
+                            "name": "CLARU",
+                            "color": "#0DE0F8",
+                            "description": "Cladophora rupestris (grønndusk)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101111,
+                            "alias": "101111",
+                            "name": "ULVA",
+                            "color": "#5E5D34",
+                            "description": "Ulva spp, e.g., U. intestinalis (tarmgrønske)",
+                            "subclasses": []
+                        }
+                    ]
+                },
+                {
+                    "classVal": 1012,
+                    "alias": "1012",
+                    "name": "RED",
+                    "color": "#912727",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 101210,
+                            "alias": "101210",
+                            "name": "PORPHYRA",
+                            "color": "#107835",
+                            "description": "Porphyra spp, e.g., P. umbilicalis (fjærehinne)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101211,
+                            "alias": "101211",
+                            "name": "CHOCR",
+                            "color": "#96D2A8",
+                            "description": "Chondrus crispus (krusflik)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101212,
+                            "alias": "101212",
+                            "name": "FURLU",
+                            "color": "#9D9811",
+                            "description": "Furcellaria lumbricalis (svartkluft)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101213,
+                            "alias": "101213",
+                            "name": "PALPA",
+                            "color": "#1C6468",
+                            "description": "Palmaria palmata (søl)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 101214,
+                            "alias": "101214",
+                            "name": "VERLA",
+                            "color": "#4F9CFB",
+                            "description": "Vertebrata lanosa (grisetangdokke/trøffeltang)",
+                            "subclasses": []
+                        }
+                    ]
+                },
+                {
+                    "classVal": 1013,
+                    "alias": "1013",
+                    "name": "TURF",
+                    "color": "#9e219a",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 101310,
+                            "alias": "101310",
+                            "name": "TURF",
+                            "color": "#9e219a",
+                            "description": "Unspecified turf (lurv)",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 11,
+            "alias": "11",
+            "name": "MAERL",
+            "color": "#757472",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1110,
+                    "alias": "1110",
+                    "name": "MAERL",
+                    "color": "#757472",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 111010,
+                            "alias": "111010",
+                            "name": "MAERL",
+                            "color": "#757472",
+                            "description": "Maerl (løstliggende rugl)",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 12,
+            "alias": "12",
+            "name": "URCHIN",
+            "color": "#ff0000",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1210,
+                    "alias": "1210",
+                    "name": "URCHIN",
+                    "color": "#ff0000",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 121010,
+                            "alias": "121010",
+                            "name": "ECHES",
+                            "color": "#8B33B1",
+                            "description": "Echinus esculentus (rød kråkebolle)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 121011,
+                            "alias": "121011",
+                            "name": "STRDR",
+                            "color": "#4FB83C",
+                            "description": "Strongylocentrotus droebachiensis (grønn kråkebolle)",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 13,
+            "alias": "13",
+            "name": "BEACHCAST",
+            "color": "#e67b09",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1310,
+                    "alias": "1310",
+                    "name": "BEACHCAST_BROWN",
+                    "color": "#e67b09",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 131010,
+                            "alias": "131010",
+                            "name": "BEACHCAST_BROWN",
+                            "color": "#e67b09",
+                            "description": "Unspecified, dried seaweed (tangvoll)",
+                            "subclasses": []
+                        }
+                    ]
+                },
+                {
+                    "classVal": 1311,
+                    "alias": "1311",
+                    "name": "BEACHCAST_ANGIO",
+                    "color": "#03fcba",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 131110,
+                            "alias": "131110",
+                            "name": "BEACHCAST_ANGIO",
+                            "color": "#03fcba",
+                            "description": "Unspecified, dried seagrass (sjøgressvoll)",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 14,
+            "alias": "14",
+            "name": "ANGIO",
+            "color": "#2da12b",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1410,
+                    "alias": "1410",
+                    "name": "ANGIO",
+                    "color": "#2da12b",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 141010,
+                            "alias": "141010",
+                            "name": "ZOSMA",
+                            "color": "#ED160A",
+                            "description": "Zostera marina (ålegras)",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 15,
+            "alias": "15",
+            "name": "WOOD",
+            "color": "#a1952b",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1510,
+                    "alias": "1510",
+                    "name": "WOOD",
+                    "color": "#a1952b",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 151010,
+                            "alias": "151010",
+                            "name": "WOOD",
+                            "color": "#a1952b",
+                            "description": "Various wood  incl. driftwood (drivved)",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 16,
+            "alias": "16",
+            "name": "TERR_VEG",
+            "color": "#c1f507",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1610,
+                    "alias": "1610",
+                    "name": "TERR_VEG",
+                    "color": "#c1f507",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 161010,
+                            "alias": "161010",
+                            "name": "TERR_VEG",
+                            "color": "#c1f507",
+                            "description": "Terrestrial vegetation",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 17,
+            "alias": "17",
+            "name": "ROCK",
+            "color": "#b5b5b3",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1710,
+                    "alias": "1710",
+                    "name": "BOULDER",
+                    "color": "#b5b5b3",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 171010,
+                            "alias": "171010",
+                            "name": "BOULDER",
+                            "color": "#b5b5b3",
+                            "description": "Blokk/fjell nakent",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 171011,
+                            "alias": "171011",
+                            "name": "BOULDER_RUR",
+                            "color": "#A718BE",
+                            "description": "Blokk/fjell med rur",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 171012,
+                            "alias": "171012",
+                            "name": "BOULDER_LAV",
+                            "color": "#189782",
+                            "description": "Blokk/fjell med messinglav/kartlav",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 171013,
+                            "alias": "171013",
+                            "name": "BOULDER_HILRU",
+                            "color": "#D6720E",
+                            "description": "Blokk/fjell med Hildenbrandia rubra (fjæreblod)",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 171014,
+                            "alias": "171014",
+                            "name": "BOULDER_CORAX",
+                            "color": "#9E4C48",
+                            "description": "Blokk/fjell med Coralline skorpeformede alger",
+                            "subclasses": []
+                        },
+                        {
+                            "classVal": 171015,
+                            "alias": "171015",
+                            "name": "BOULDER_GREEN",
+                            "color": "#20BA04",
+                            "description": "Blokk/fjell med grønnalger",
+                            "subclasses": []
+                        }
+                    ]
+                },
+                {
+                    "classVal": 1711,
+                    "alias": "1711",
+                    "name": "COBBLE",
+                    "color": "#b5b5b3",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 171110,
+                            "alias": "171110",
+                            "name": "COBBLE",
+                            "color": "#b5b5b3",
+                            "description": "Stein",
+                            "subclasses": []
+                        }
+                    ]
+                },
+                {
+                    "classVal": 1712,
+                    "alias": "1712",
+                    "name": "GRAVEL",
+                    "color": "#b5b5b3",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 171210,
+                            "alias": "171210",
+                            "name": "GRAVEL",
+                            "color": "#b5b5b3",
+                            "description": "Grus",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 18,
+            "alias": "18",
+            "name": "SEDIMENT",
+            "color": "#ffff00",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1810,
+                    "alias": "1810",
+                    "name": "SAND",
+                    "color": "#ffff00",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 181010,
+                            "alias": "181010",
+                            "name": "SAND",
+                            "color": "#ffff00",
+                            "description": "Sandy bottom (sandbunn)",
+                            "subclasses": []
+                        }
+                    ]
+                },
+                {
+                    "classVal": 1811,
+                    "alias": "1811",
+                    "name": "MUD",
+                    "color": "#ffb700",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 181110,
+                            "alias": "181110",
+                            "name": "MUD",
+                            "color": "#ffb700",
+                            "description": "Muddy soft bottom (mudderbunn)",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "classVal": 19,
+            "alias": "19",
+            "name": "ANTHRO",
+            "color": "#000000",
+            "description": "",
+            "subclasses": [
+                {
+                    "classVal": 1910,
+                    "alias": "1910",
+                    "name": "ANTHRO",
+                    "color": "#000000",
+                    "description": "",
+                    "subclasses": [
+                        {
+                            "classVal": 191010,
+                            "alias": "191010",
+                            "name": "ANTHRO",
+                            "color": "#000000",
+                            "description": "Anthropogenic (antropogent), e.g., house, people, litter, plastics",
+                            "subclasses": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
