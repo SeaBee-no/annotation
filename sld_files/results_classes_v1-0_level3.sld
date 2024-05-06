@@ -10,7 +10,7 @@
           <Name/>
           <RasterSymbolizer>
             <Opacity>1</Opacity>
-            <ColorMap type="intervals">
+            <ColorMap type="values">
               <ColorMapEntry color="#5C5255" quantity="101010" label="ALAES (Alaria esculenta (butare))" opacity="1"/>
               <ColorMapEntry color="#EED859" quantity="101011" label="ASCNO (Ascophyllum nodosum (grisetang))" opacity="1"/>
               <ColorMapEntry color="#776353" quantity="101012" label="CHOFI (Chorda filum (martaum))" opacity="1"/>
