@@ -333,7 +333,7 @@
                         {
                             "classVal": "121110",
                             "alias": "121110",
-                            "name": "ANTHRO",
+                            "name": "LITTER",
                             "color": "#037AC9",
                             "description": "Anthropogenic, e.g., house, litter, plastics",
                             "subclasses": []
