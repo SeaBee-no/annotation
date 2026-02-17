@@ -1,0 +1,113 @@
+code,name,desc,colour
+10,ALGAE,,#996633
+1010,BROWN,,#996633
+101010,ALAES,Alaria esculenta,#5C5255
+101011,ASCNO,Ascophyllum nodosum,#EED859
+101012,CHOFI,Chorda filum,#776353
+101013,CYSBA,Cystoseira barbata,#ECD957
+101014,CYSBO,Cystoseira bosphorica,#B69656
+101015,DESAC,Desmarestia aculeata,#B59C88
+101016,FUCCE,Fucus ceranoides,#D9B47D
+101017,FUCSE,Fucus serratus,#D0C78D
+101018,FUCSP,Fucus spiralis,#A8875D
+101019,FUCVE,Fucus vesiculosus,#E6CA74
+101020,HALSI,Halidrys siliquosa,#9CA004
+101021,LAMHY,Laminaria hyperborea (incl. L. digitata),#84582C
+101022,PELCA,Pelvetia canaliculata,#C8A05F
+101023,SACLA,Saccharina latissima,#B15D29
+1011,GREEN,,#5DC036
+101110,CLADO,Cladophora spp. (e.g. C. rupestris),#76A735
+101111,ULVA,"Ulva spp (e.g. U. intestinalis, U. rigida)",#5DC036
+1012,RED,,#CF4D50
+101210,CERVI,Ceramium virgatum,#E17F6B
+101211,CHOCR,Chondrus crispus,#B03032
+101212,FURLU,Furcellaria lumbricalis,#B75D61
+101213,GRAVE,Gracilaria vermiculophylla,#7F3D6F
+101214,PALPA,Palmaria palmata,#6B3356
+101215,PORPH,Porphyra spp (e.g. P. umbilicalis),#C796A6
+101216,VERLA,Vertebrata lanosa,#47223E
+1013,TURF,,#779A7F
+101310,TURF,Unspecified filamentous turf algae,#779A7F
+11,ANGIO,,#A7FD67
+1110,ANGIO,,#A7FD67
+111010,ZOSMA,Zostera marina,#A7FD67
+111011,ZOSNO,Zostera noltei,#C6FE9C
+1111,CYMODOCEA,,#A7FD67
+111110,CYMNO,Cymodocea nodosa,#B2E48C
+1112,POSIDONIA,,#A7FD67
+111210,POSOC,Posidonia oceanica,#A0CD7E
+111211,POSOC_DEAD_LEAF,Dead Posidonia oceanica leaves,#80A464
+111212,POSOC_DEAD_MATTE,Dead Posidonia oceanica matte,#607B4B
+12,ANTHRO,,#037AC9
+1210,INFRA,,#037AC9
+121010,BUILD,Buildings (e.g. house roofs),#51B7FD
+121011,PIER,Piers (e.g. piled up rocks and concrete),#00A6DA
+121012,ROAD,"Roads (e.g. asphalt, concrete)",#0061CC
+121013,TETRA,Tetrapods piers,#009BCC
+1211,LITTER,,#037AC9
+121110,LITTER,"Anthropogenic, e.g., house, litter, plastics",#037AC9
+1212,VEHICLES,,#037AC9
+121210,BOATS,Boats,#10B8BC
+121211,CARS,Cars,#12CBD0
+13,BEACHCAST,,#645210
+1310,BEACH_ANGIO,,#5B6112
+131010,BEACH_ANGIO,"Dried seagrass, unspecified",#5B6112
+1311,BEACH_BROWN,,#645210
+131110,BEACH_BROWN,"Dried seaweed, unspecified",#645210
+14,DEEP,,#14436A
+1410,DEEP,,#14436A
+141010,DEEP,Deep sea (much deeper than Secchi deep),#14436A
+15,GASTRO,,#F0530A
+1510,GASTRO,,#F0530A
+151010,RAPVE,Rapana venosa,#F0530A
+16,MAERL,,#CAA2A9
+1610,MAERL,,#CAA2A9
+161010,MAERL,Maerl,#CAA2A9
+17,MUSSELS,,#B8BBDE
+1710,MUSSELS,,#B8BBDE
+171010,CRAGI,Crassostrea gigas,#E7E7E7
+171011,MYTED,Mytilus edilus,#878CC6
+171012,MYTGA,Mytilus galloprovincialis,#AE9DD7
+171013,MYTLI,Mytilaster lineatus,#E78DCF
+18,ROCK,,#B2B2B2
+1810,BEDROCK,,#777777
+181010,BEDROCK,Bedrock,#777777
+1811,BOULDER,,#969696
+181110,BOULDER,Boulder,#969696
+1812,COBBLE,,#C0C0C0
+181210,COBBLE,Cobble,#C0C0C0
+1813,GRAVEL,,#DDDDDD
+181310,GRAVEL,Gravel,#DDDDDD
+19,SALTMARSH,,#C7E5B3
+1910,SALTMARSH_HIGH,,#ADD98F
+191010,JUNAC,Juncus acutus,#ADD98F
+191011,JUNMA,Juncus maritimus,#9AD076
+1911,SALTMARSH_LOW,,#DFF0D4
+191110,SALIC,Salicornia spp,#F1F8EC
+191111,SPART,Spartina spp,#DFF0D4
+1912,SALTMARSH_MID,,#C7E5B3
+191210,HALPO,Halimione portulacoides,#C7E5B3
+20,SEDIMENT,,#ACF5D5
+2010,MUD,,#D5F8E2
+201010,MUD_INTERTIDAL,Muddy intertidal (e.g. mudflats),#D5F8E2
+201011,MUD_LAND,Muddy land,#C1F5D5
+201012,MUD_SEA,Muddy seafloor (below intertidal),#EAFCF1
+2011,SAND,,#ACF5D5
+201110,SAND_INTERTIDAL,Sandy intertidal,#E5F5D5
+201111,SAND_LAND,Sandy beach,#E1DAD5
+201112,SAND_SEA,Sandy seafloor (below intertidal),#ACF5D5
+21,STARFISH,,#80258F
+2110,STARFISH,,#80258F
+211010,ASTRU,Asterias rubens,#BE4BD1
+211011,OPHNI,Ophiocomina nigra,#80258F
+22,TERR_VEG,,#5E7403
+2210,TERR_VEG,,#5E7403
+221010,TERR_VEG,Terrestrial vegetation,#5E7403
+23,URCHIN,,#868509
+2310,URCHIN,,#868509
+231010,ECHES,Echinus esculentus,#ED7D31
+231011,GRAAC,Gracilechinus acutus,#C98C58
+231012,STRDR,Strongylocentrotus droebachiensis,#868509
+24,WOOD,,#F1DEC9
+2410,WOOD,,#F1DEC9
+241010,WOOD,Various wood (e.g. driftwood),#F1DEC9
